@@ -1,4 +1,3 @@
-puts "What number do you want to count?"
 count = 20 # カウントしたい回数
   
 # FizzBuzzの判定
