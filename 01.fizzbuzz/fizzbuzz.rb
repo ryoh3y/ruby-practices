@@ -1,5 +1,5 @@
 puts "What number do you want to count?"
-  count = gets # カウントしたい回数
+count = gets # カウントしたい回数
   
   # FizzBuzzの判定
   (1..count.to_i).each do |x| # Rangeオブジェクトを使ってcountの数まで１ずつ繰り返す
