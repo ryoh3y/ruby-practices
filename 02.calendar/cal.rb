@@ -27,7 +27,7 @@ if options[:month]
   end
 else
   if options[:year]
-    puts "ERROR!"
+    abort("ERROR!")
   end
 end
 
