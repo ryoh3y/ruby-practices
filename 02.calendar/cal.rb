@@ -43,9 +43,7 @@ puts "      #{month}月 #{year}"
 puts "日 月 火 水 木 金 土 "
 
 # 今月の日付をプリントする
-(0...first_day.wday).each do
-  print "   "
-end
+print "   " * first_day.wday
 
 (first_day...last_day).each do |date|
   print date.day.to_s.rjust(2) + " "
