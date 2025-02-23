@@ -48,8 +48,8 @@ print "   " * first_day.wday
 (first_day...last_day).each do |date|
   print date.day.to_s.rjust(2) + " "
   if date.saturday?
-    puts "\n"
+    puts ""
   end
 end
 
-print "\n"
+puts ""
