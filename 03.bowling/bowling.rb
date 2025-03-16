@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'rubocop'
+
 # スコアを配列に変換
 score = ARGV[0].gsub('X', '10, 0')
 shots = score.split(',').map(&:strip).map(&:to_i)
@@ -14,7 +16,7 @@ frames.each_with_index do |frame, index|
     if index == 9
       frames.slice(9..-1).flatten.sum # 10フレーム目は追加点なしで合計を計算
     elsif frame.first == 10 # ストライク時の得点計算
-      if frames[index + 1].first == 10 
+      if frames[index + 1].first == 10
         10 + frames[index + 1].first + frames[index + 2].first
       else
         10 + frames[index + 1].sum
