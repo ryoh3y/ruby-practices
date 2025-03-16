@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'rubocop'
-
 # スコアを配列に変換
 score = ARGV[0].gsub('X', '10, 0')
 shots = score.split(',').map(&:strip).map(&:to_i)
