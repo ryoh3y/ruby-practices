@@ -210,3 +210,101 @@
 ❯ ./bowling.rb X,0,0,X,0,0,X,0,0,X,0,0,X,0,0 
 50
 ```
+
+# ２回目の提出 「プログラム実行の例」にある全ての入力例を実行
+
+```
+# Expected
+% ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,6,4,5
+139
+```
+
+```
+# Actual
+❯ ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,6,4,5
+139
+```
+
+```
+# Expected
+% ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,X,X
+164
+```
+
+```
+# Actual
+❯ ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,X,X
+164
+```
+
+```
+# Expected
+% ./bowling.rb 0,10,1,5,0,0,0,0,X,X,X,5,1,8,1,0,4
+107
+```
+
+```
+# Actual
+❯ ./bowling.rb 0,10,1,5,0,0,0,0,X,X,X,5,1,8,1,0,4
+107
+```
+
+```
+# Expected
+% ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,0,0
+134
+```
+
+```
+# Actual
+❯ ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,0,0
+134
+```
+
+```
+# Expected
+% ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,1,8
+144
+```
+
+```
+# Actual
+❯ ./bowling.rb 6,3,9,0,0,3,8,2,7,3,X,9,1,8,0,X,X,1,8
+144
+```
+
+```
+# Expected
+% ./bowling.rb X,X,X,X,X,X,X,X,X,X,X,X 
+300
+```
+
+```
+# Actual
+❯ ./bowling.rb X,X,X,X,X,X,X,X,X,X,X,X 
+300
+```
+
+```
+# Expected
+% ./bowling.rb X,X,X,X,X,X,X,X,X,X,X,2
+292
+```
+
+```
+# Actual
+❯ ./bowling.rb X,X,X,X,X,X,X,X,X,X,X,2
+292
+```
+
+```
+# Expected
+% ./bowling.rb X,0,0,X,0,0,X,0,0,X,0,0,X,0,0 
+50
+```
+
+```
+# Actual
+❯ ./bowling.rb X,0,0,X,0,0,X,0,0,X,0,0,X,0,0 
+50
+```
