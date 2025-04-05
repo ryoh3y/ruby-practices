@@ -13,10 +13,10 @@ point = frames.take(10).each_with_index.sum do |frame, index|
   elsif frame.first == 10 # ストライク時の計算
     strike = frame.sum
     next_frame_first_roll = frames[index + 1].first
-    if frames[index + 1].first == 10
-      strike + next_frame_first_roll + frames[index + 2].first
+    strike + next_frame_first_roll + if frames[index + 1].first == 10
+      frames[index + 2].first
     else
-      strike + next_frame_first_roll + frames[index + 1].last
+      frames[index + 1].last
     end
   elsif frame.sum == 10 # スペア時の計算
     frame.sum + frames[index + 1].first
