@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+COLUMN_COUNT = 3
+
 class Ls
   def run
     files = fetch_files
@@ -19,7 +21,7 @@ class Ls
   end
 
   def format_columns(files)
-    col = 3
+    col = COLUMN_COUNT
     sorted_files = files.sort
     row_count = (sorted_files.length.to_f / col).ceil
     rows = sorted_files.each_slice(row_count).to_a
