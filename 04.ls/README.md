@@ -23,3 +23,26 @@ a.rb  d.rb  g.rb
 b.rb  e.rb  ls.rb
 c.rb  f.rb
 ```
+
+## 課題 02
+### 期待要件
+- ターミナルでのlsコマンドを実行した出力結果を```ruby ls.rb -a```を実行したら隠しファイルが出力結果に出るようになる
+  - オプションありとなしそれぞれの出力ができるようになる
+  - ```-a```以外のオプションも今後追加されるため複数のオプションを追加できるようにする
+
+期待出力（オプションなし）
+```
+> ruby ls.rb
+my_bloody_valentine.rb      ride.rb                     the_jesus_and_mary_chain.rb
+oasis.rb                    slowdive.rb                                            
+primal_scream.rb            teenage_fanclub.rb    
+```
+
+期待出力（オプションあり）
+```
+> ruby ls.rb -a
+.                           oasis.rb                    teenage_fanclub.rb         
+..                          primal_scream.rb            the_jesus_and_mary_chain.rb
+.DS_Store                   ride.rb                                                
+my_bloody_valentine.rb      slowdive.rb    
+```
