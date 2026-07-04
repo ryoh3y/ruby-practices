@@ -1,12 +1,26 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'optparse'
+
+options = {}
+
+OptionParser.new do |option|
+  option.on('-a') do
+    options[:all] = true
+  end
+end.parse!
+
 COLUMN_COUNT = 3
 
 class Ls
+  def initialize(options)
+    @options = options
+  end
+
   def run
     files = fetch_files
-    files = filter_visible_files(files)
+    files = filter_visible_files(files) unless @options[:all]
     rows = format_columns(files)
 
     output(rows)
@@ -40,4 +54,4 @@ class Ls
   end
 end
 
-Ls.new.run if __FILE__ == $PROGRAM_NAME
+Ls.new(options).run if __FILE__ == $PROGRAM_NAME
