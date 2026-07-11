@@ -20,7 +20,7 @@ class Ls
 
   def run
     files = fetch_files
-    files = filter_visible_files(files) unless @options[:all]
+    files = @options[:all] ? files :  filter_visible_files(files)
     rows = format_columns(files)
 
     output(rows)
