@@ -3,6 +3,8 @@
 
 require 'optparse'
 
+COLUMN_COUNT = 3
+
 options = {}
 
 OptionParser.new do |option|
@@ -10,8 +12,6 @@ OptionParser.new do |option|
     options[:all] = true
   end
 end.parse!
-
-COLUMN_COUNT = 3
 
 class Ls
   def initialize(options)
