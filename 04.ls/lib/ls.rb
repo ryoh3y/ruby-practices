@@ -11,6 +11,9 @@ OptionParser.new do |option|
   option.on('-a') do
     options[:all] = true
   end
+  option.on('-r') do
+    options[:reverse] = true
+  end
 end.parse!
 
 class Ls
@@ -20,7 +23,9 @@ class Ls
 
   def run
     files = fetch_files
-    files = @options[:all] ? files :  filter_visible_files(files)
+    files = @options[:all] ? files : filter_visible_files(files)
+    files = files.sort
+    files = @options[:reverse] ? files.reverse : files
     rows = format_columns(files)
 
     output(rows)
@@ -36,9 +41,8 @@ class Ls
 
   def format_columns(files)
     col = COLUMN_COUNT
-    sorted_files = files.sort
-    row_count = (sorted_files.length.to_f / col).ceil
-    rows = sorted_files.each_slice(row_count).to_a
+    row_count = (files.length.to_f / col).ceil
+    rows = files.each_slice(row_count).to_a
     max_cols = rows.map(&:length).max
     rows.each do |row|
       row.fill(nil, row.length...max_cols)

@@ -46,3 +46,24 @@ primal_scream.rb            teenage_fanclub.rb
 .DS_Store                   ride.rb                                                
 my_bloody_valentine.rb      slowdive.rb    
 ```
+
+## 課題 0３
+### 期待要件
+- ターミナルでのlsコマンドを実行した出力結果を```ruby ls.rb -r```を実行したらファイルが逆順になった出力結果が出るようになる
+  - オプションありとなしそれぞれの出力ができるようになる
+
+期待出力（オプションなし）
+```
+> ruby ls.rb
+my_bloody_valentine.rb      ride.rb                     the_jesus_and_mary_chain.rb
+oasis.rb                    slowdive.rb                                            
+primal_scream.rb            teenage_fanclub.rb    
+```
+
+期待出力（オプションあり）
+```
+> ruby ls.rb -r
+the_jesus_and_mary_chain.rb ride.rb                     my_bloody_valentine.rb      
+teenage_fanclub.rb          primal_scream.rb            
+slowdive.rb                 oasis.rb                    
+```
