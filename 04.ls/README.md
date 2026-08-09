@@ -67,3 +67,29 @@ the_jesus_and_mary_chain.rb ride.rb                     my_bloody_valentine.rb
 teenage_fanclub.rb          primal_scream.rb            
 slowdive.rb                 oasis.rb                    
 ```
+
+## 課題 04
+### 期待要件
+- ターミナルでのlsコマンドを実行した出力結果を```ruby ls.rb -l```を実行したらファイルのパーミッション情報、所有者、作成日時の情報が出力される。
+
+期待出力（オプションなし）
+```
+> ruby ls.rb
+my_bloody_valentine.rb		primal_scream.rb		slowdive.rb			the_jesus_and_mary_chain.rb
+oasis.rb			ride.rb				teenage_fanclub.rb
+
+```
+
+期待出力（オプションあり）
+```
+> ruby ls.rb -l
+total 0
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 my_bloody_valentine.rb
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 oasis.rb
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 primal_scream.rb
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 ride.rb
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 slowdive.rb
+-rw-r--r--  1 ryoheiharada  staff  0  3月 16 20:36 teenage_fanclub.rb
+-rw-r--r--@ 1 ryoheiharada  staff  0  3月 16 20:36 the_jesus_and_mary_chain.rb
+
+```
