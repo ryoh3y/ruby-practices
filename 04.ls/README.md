@@ -162,3 +162,26 @@ ctime       最終状態変更時刻(状態の変更とは chmod などによる
 今回、File.statで取得して必要になる情報は、```mode, nlink, uid, size, mtime```の5項目とファイル名。
 ```total```を出すためには```blocks```を取得して足し合わせた結果を出す。
 
+#### File Permission Modes
+[File Permission Modes - oracle](https://docs.oracle.com/cd/E19253-01/816-4557/secfile-14/index.html)を確認して、パーミッションの対照表を作成する。
+
+r: Read権限（読む権限）
+w: Write権限（書き込む権限）
+x: Execute権限（実行する権限）
+
+| Octal Value | File Permissions Set | Permissions Description |
+| --- | --- | --- |
+| 0 | `---` | No permissions |
+| 1 | `--x` | Execute permission only |
+| 2 | `-w-` | Write permission only |
+| 3 | `-wx` | Write and execute permissions |
+| 4 | `r--` | Read permission only |
+| 5 | `r-x` | Read and execute permissions |
+| 6 | `rw-` | Read and write permissions |
+| 7 | `rwx` | Read, write, and execute permissions |
+
+
+#### ３つのロールによる権限
+- 1つ目の: 所有者 (user) の権限
+- 2つ目の: グループ (group) の権限
+- 3つ目の: その他のユーザー (others) の権限
