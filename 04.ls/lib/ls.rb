@@ -14,7 +14,7 @@ PERMISSION_MAP = {
   '5' => 'r-x',
   '6' => 'rw-',
   '7' => 'rwx'
-}
+}.freeze
 
 options = {}
 
